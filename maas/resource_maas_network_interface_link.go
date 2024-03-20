@@ -89,7 +89,7 @@ func resourceNetworkInterfaceLinkCreate(ctx context.Context, d *schema.ResourceD
 	// Save the resource id
 	d.SetId(fmt.Sprintf("%v", link.ID))
 
-	return resourceNetworkInterfaceLinkUpdate(ctx, d, meta)
+	return resourceNetworkInterfaceLinkRead(ctx, d, meta)
 }
 
 func resourceNetworkInterfaceLinkRead(ctx context.Context, d *schema.ResourceData, meta interface{}) diag.Diagnostics {
